@@ -9,8 +9,11 @@
 
 import { mkdirSync, writeFileSync } from "node:fs";
 
+// The slogan line, kept byte-identical for the entry output.
 const SLOGAN =
   "Your Solana wallet's doorman is Gus: he checks every guest twice, pockets nothing, and only opens the door for you.";
 
+const ENTRY_PATH = "/output/entry.txt";
+
 mkdirSync("/output", { recursive: true });
-writeFileSync("/output/entry.txt", SLOGAN, "utf8");
+writeFileSync(ENTRY_PATH, SLOGAN, "utf8");
